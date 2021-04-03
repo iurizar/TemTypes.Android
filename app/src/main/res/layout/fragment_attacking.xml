@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AttackingFragment">
+    tools:context=".fragments.AttackingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".activities.MainActivity">
 
         <!--Top TextView-->
         <TextView
@@ -20,8 +20,8 @@
             android:text="Choose a type" />
 
         <Button
-            android:id="@+id/button_type1"
-            android:layout_width="100dp"
+            android:id="@+id/button_type_att"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
             android:text="Type" />
@@ -59,6 +59,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_neutral_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -74,6 +75,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_fire_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -89,6 +91,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_water_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -104,6 +107,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_nature_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -126,6 +130,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_electric_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -141,6 +146,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_earth_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -156,6 +162,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_mental_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -171,6 +178,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_wind_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -193,6 +201,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_digital_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -208,6 +217,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_melee_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -223,6 +233,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_crystal_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -238,6 +249,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/att_toxic_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>

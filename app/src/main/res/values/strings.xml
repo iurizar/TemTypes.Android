@@ -4,4 +4,32 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="madeby">App by Iñigo Urizar Lete</string>
     <string name="disclaimer">Type icons belong to Crema</string>
+    <string-array name="array_types">
+        <item>Neutral</item>
+        <item>Fire</item>
+        <item>Water</item>
+        <item>Nature</item>
+        <item>Electric</item>
+        <item>Earth</item>
+        <item>Mental</item>
+        <item>Wind</item>
+        <item>Digital</item>
+        <item>Melee</item>
+        <item>Crystal</item>
+        <item>Toxic</item>
+    </string-array>
+    <integer-array name="types_icon_values">
+        <item>@drawable/neutral</item>
+        <item>@drawable/fire</item>
+        <item>@drawable/water</item>
+        <item>@drawable/nature</item>
+        <item>@drawable/electric</item>
+        <item>@drawable/earth</item>
+        <item>@drawable/mental</item>
+        <item>@drawable/wind</item>
+        <item>@drawable/digital</item>
+        <item>@drawable/melee</item>
+        <item>@drawable/crystal</item>
+        <item>@drawable/toxic</item>
+    </integer-array>
 </resources>

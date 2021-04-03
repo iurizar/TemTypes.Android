@@ -7,4 +7,23 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="uneffective">#c62828</color>
+    <color name="effective">#43A047</color>
+    <color name="crystal">#EA4B68</color>
+    <color name="neutral">#E7F7F6</color>
+    <color name="digital">#A5C0C2</color>
+    <color name="earth">#774E40</color>
+    <color name="electric">#FDE178</color>
+    <color name="fire">#E75C4D</color>
+    <color name="melee">#D98864</color>
+    <color name="mental">#BE6CA1</color>
+    <color name="nature">#ADDD79</color>
+    <color name="toxic">#5D555F</color>
+    <color name="water">#46CCFA</color>
+    <color name="wind">#09FAB4</color>
+    <color name="normal">#000000</color>
+    <color name="pastel_purple">#F5E1FD</color>
+    <color name="paste_purple_tab">#B399D4</color>
+    <color name="light_purple">#c29bff</color>
+    <color name="menu_gray">#F5F5F6</color>
 </resources>

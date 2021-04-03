@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DefendingFragment">
+    tools:context=".fragments.DefendingFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center_horizontal"
         android:orientation="vertical"
-        tools:context=".MainActivity">
+        tools:context=".activities.MainActivity">
 
         <!--Top TextView-->
         <TextView
@@ -27,14 +27,14 @@
 
             <Button
                 android:id="@+id/button_type1"
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="Type 1" />
 
             <Button
                 android:id="@+id/button_type2"
-                android:layout_width="100dp"
+                android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="20dp"
                 android:text="Type 2" />
@@ -73,6 +73,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_neutral_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -88,6 +89,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_fire_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -103,6 +105,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_water_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -118,6 +121,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_nature_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -140,6 +144,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_electric_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -155,6 +160,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_earth_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -170,6 +176,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_mental_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -185,6 +192,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_wind_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -207,6 +215,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_digital_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -222,6 +231,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_melee_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -237,6 +247,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_crystal_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -252,6 +263,7 @@
                             android:layout_height="50dp"
                             android:layout_width="50dp"/>
                         <TextView
+                            android:id="@+id/def_toxic_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="x"/>
@@ -269,6 +281,7 @@
             android:gravity="center"
             android:layout_marginTop="4dp">
             <TextView
+                android:id="@+id/text_view_madeby"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12dp"
