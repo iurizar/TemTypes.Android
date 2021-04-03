@@ -192,6 +192,9 @@ public class DefendingFragment extends Fragment {
         type1.setText("Type 1");
         type2.setBackgroundColor(getResources().getColor(R.color.purple_500, null));
         type2.setText("Type 2");
+        selectedTypeTwo = "";
+        selectedTypeOne = "";
+        selectedButton = 0;
         for(int i=0; i<textViews.length;i++) {
             textViews[i].setText("x");
             textViews[i].setTextColor(getResources().getColor(R.color.text_color,null));
