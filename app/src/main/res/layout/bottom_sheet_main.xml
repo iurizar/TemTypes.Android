@@ -10,18 +10,35 @@
     app:behavior_hideable="true"
     android:background="@color/white"
     tools:showIn="@layout/activity_main">
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:textSize="28dp"
-        android:padding="8dp"
-        android:textColor="@color/white"
+        android:layout_height="wrap_content"
         android:background="@color/purple_500"
-        android:text="Types"/>
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:textSize="28dp"
+            android:padding="8dp"
+            android:layout_marginLeft="8dp"
+            android:textColor="@color/white"
+            android:layout_alignParentLeft="true"
+            android:text="Types"/>
+
+        <ImageView
+            android:id="@+id/down_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/down_arrow_white" />
+
+
+    </RelativeLayout>
     <ListView
         android:id="@+id/types_list_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
-
-
 </LinearLayout>

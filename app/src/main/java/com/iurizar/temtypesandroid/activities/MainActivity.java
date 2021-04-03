@@ -3,6 +3,7 @@ package com.iurizar.temtypesandroid.activities;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
     BottomSheetBehavior bsb;
     LinearLayout bottomSheet;
     ListView typeListView;
+    ImageView downIcon;
     public TypeWeakness responseType;
     private int position;
     private static final String[] TYPE_LIST = {"Neutral", "Fire", "Water", "Nature",
@@ -67,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
         typeListView.setAdapter(listViewAdapter);
 
         bsb.setState(BottomSheetBehavior.STATE_HIDDEN);
+
+        downIcon = findViewById(R.id.down_icon);
+        downIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                bsb.setState(BottomSheetBehavior.STATE_HIDDEN);
+            }
+        });
 
 
         Fragment fragment = new DefendingFragment();

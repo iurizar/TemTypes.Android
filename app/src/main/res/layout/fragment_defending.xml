@@ -14,7 +14,7 @@
 
         <!--Top TextView-->
         <TextView
-            android:layout_margin="20dp"
+            android:layout_margin="12dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Choose type(s)" />
@@ -29,14 +29,14 @@
                 android:id="@+id/button_type1"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="16dp"
                 android:text="Type 1" />
 
             <Button
                 android:id="@+id/button_type2"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
+                android:layout_margin="16dp"
                 android:text="Type 2" />
         </LinearLayout>
 
@@ -47,7 +47,7 @@
             android:layout_gravity="center"
             android:layout_width="300dp"
             android:layout_height="350dp"
-            android:layout_margin="24dp"
+            android:layout_margin="16dp"
             card_view:cardCornerRadius="20dp"
             card_view:cardElevation="8dp">
 
@@ -284,14 +284,27 @@
                 android:id="@+id/text_view_madeby"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:text="@string/madeby"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="12dp"
+                android:textSize="8dp"
                 android:text="@string/disclaimer"/>
         </LinearLayout>
+        <ImageView
+            android:id="@+id/refresh_icon"
+            android:layout_marginTop="16dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/refresh"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textSize="12dp"
+            android:text="Push to clear icons"
+            android:gravity="center"/>
 
     </LinearLayout>
 

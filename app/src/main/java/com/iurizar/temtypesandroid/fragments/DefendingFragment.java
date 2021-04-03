@@ -1,6 +1,7 @@
 package com.iurizar.temtypesandroid.fragments;
 
 import android.app.Activity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -10,7 +11,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -31,11 +36,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link DefendingFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class DefendingFragment extends Fragment {
     
     private static final String ARG_PARAM1 = "param1";
@@ -48,6 +49,7 @@ public class DefendingFragment extends Fragment {
     LinearLayout bottomSheet;
     private Button type1;
     private Button type2;
+    private ImageView refreshIcon;
     private String selectedTypeOne;
     private String selectedTypeTwo;
     private int selectedButton;
@@ -85,6 +87,17 @@ public class DefendingFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_defending, container, false);
         type1 = (Button) view.findViewById(R.id.button_type1);
         type2 = (Button) view.findViewById(R.id.button_type2);
+        refreshIcon = (ImageView) view.findViewById(R.id.refresh_icon);
+        refreshIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                RotateAnimation rotate = new RotateAnimation(0, 180, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+                rotate.setDuration(200);
+                rotate.setInterpolator(new LinearInterpolator());
+                refreshIcon.startAnimation(rotate);
+                resetFragment();
+            }
+        });
         type1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,10 +119,11 @@ public class DefendingFragment extends Fragment {
         if (selectedTypeTwo == null) {
             selectedTypeTwo = "";
         }
-
+        findViews(view);
+        textViews = getTextViews();
         if(!selectedTypeOne.equalsIgnoreCase("") && selectedTypeTwo.equalsIgnoreCase("")) {
-            findViews(view);
-            textViews = getTextViews();
+
+
             MainActivity act = (MainActivity) getActivity();
             String[] selectedArray = {selectedTypeOne};
             WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
@@ -119,8 +133,6 @@ public class DefendingFragment extends Fragment {
             type1.setText(selectedTypeOne);
             type1.setBackgroundColor(style.changeButtonColor(selectedTypeOne, getContext()));
         } else if(!selectedTypeTwo.equalsIgnoreCase("") && selectedTypeOne.equalsIgnoreCase("")) {
-            findViews(view);
-            textViews = getTextViews();
             MainActivity act = (MainActivity) getActivity();
             String[] selectedArray = {selectedTypeTwo};
             WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
@@ -130,8 +142,6 @@ public class DefendingFragment extends Fragment {
             type2.setText(selectedTypeTwo);
             type2.setBackgroundColor(style.changeButtonColor(selectedTypeTwo, getContext()));
         } else if(!selectedTypeTwo.equalsIgnoreCase("") && !selectedTypeOne.equalsIgnoreCase("")) {
-            findViews(view);
-            textViews = getTextViews();
             MainActivity act = (MainActivity) getActivity();
             String[] selectedArray = {selectedTypeOne, selectedTypeTwo};
             WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
@@ -174,6 +184,18 @@ public class DefendingFragment extends Fragment {
             selectedTypeOne = s;
         } else if (i==2) {
             selectedTypeTwo = z;
+        }
+    }
+
+    public void resetFragment() {
+        type1.setBackgroundColor(getResources().getColor(R.color.purple_500, null));
+        type1.setText("Type 1");
+        type2.setBackgroundColor(getResources().getColor(R.color.purple_500, null));
+        type2.setText("Type 2");
+        for(int i=0; i<textViews.length;i++) {
+            textViews[i].setText("x");
+            textViews[i].setTextColor(getResources().getColor(R.color.text_color,null));
+            textViews[i].setTypeface(Typeface.DEFAULT);
         }
     }
 

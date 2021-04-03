@@ -26,4 +26,5 @@
     <color name="paste_purple_tab">#B399D4</color>
     <color name="light_purple">#c29bff</color>
     <color name="menu_gray">#F5F5F6</color>
+    <color name="text_color">#808080</color>
 </resources>
