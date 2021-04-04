@@ -36,16 +36,12 @@ public class DefendingFragment extends Fragment {
 
     private String mParam1;
     private String mParam2;
-    private TypeWeakness responseType;
-    public BottomSheetBehavior bsb;
-    LinearLayout bottomSheet;
     private Button type1;
     private Button type2;
     private ImageView refreshIcon;
     private String selectedTypeOne;
     private String selectedTypeTwo;
     private int selectedButton;
-    private Type finalType;
     private TextView neutralText, fireText, waterText, natureText, electricText, earthText, mentalText, windText,
             digitalText, meleeText, crystalText, toxicText;
     private TextView[] textViews;

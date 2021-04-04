@@ -19,11 +19,6 @@ import tech.iurizar.temtypes.model.Type;
 import tech.iurizar.temtypes.utils.FragmentUtils;
 import tech.iurizar.temtypes.utils.StyleUtils;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AttackingFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AttackingFragment extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
