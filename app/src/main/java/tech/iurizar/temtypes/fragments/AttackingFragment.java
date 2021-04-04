@@ -2,11 +2,13 @@ package tech.iurizar.temtypes.fragments;
 
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import tech.iurizar.temtypes.R;
 import tech.iurizar.temtypes.activities.MainActivity;
 import tech.iurizar.temtypes.calculatorutils.WeaknessCalculator;
 import tech.iurizar.temtypes.model.Type;
+import tech.iurizar.temtypes.utils.FragmentUtils;
 import tech.iurizar.temtypes.utils.StyleUtils;
 
 /**
@@ -82,6 +85,17 @@ public class AttackingFragment extends Fragment {
 
         }
         return view;
+    }
+
+    @Nullable
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        if (FragmentUtils.sDisableFragmentAnimations) {
+            Animation a = new Animation() {};
+            a.setDuration(0);
+            return a;
+        }
+        return super.onCreateAnimation(transit, enter, nextAnim);
     }
 
     private void findViews(View view) {

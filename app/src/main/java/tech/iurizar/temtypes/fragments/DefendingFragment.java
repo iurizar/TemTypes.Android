@@ -3,6 +3,7 @@ package tech.iurizar.temtypes.fragments;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -22,6 +23,7 @@ import tech.iurizar.temtypes.activities.MainActivity;
 import tech.iurizar.temtypes.calculatorutils.WeaknessCalculator;
 import tech.iurizar.temtypes.model.Type;
 import tech.iurizar.temtypes.model.TypeWeakness;
+import tech.iurizar.temtypes.utils.FragmentUtils;
 import tech.iurizar.temtypes.utils.StyleUtils;
 
 import org.jetbrains.annotations.NotNull;
@@ -126,6 +128,17 @@ public class DefendingFragment extends Fragment {
             type2.setBackgroundColor(style.changeButtonColor(selectedTypeTwo, getContext()));
         }
         return view;
+    }
+
+    @Nullable
+    @Override
+    public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
+        if (FragmentUtils.sDisableFragmentAnimations) {
+            Animation a = new Animation() {};
+            a.setDuration(0);
+            return a;
+        }
+        return super.onCreateAnimation(transit, enter, nextAnim);
     }
 
     @NotNull
