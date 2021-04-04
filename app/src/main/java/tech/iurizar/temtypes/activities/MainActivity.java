@@ -1,9 +1,8 @@
-package com.iurizar.temtypesandroid.activities;
+package tech.iurizar.temtypes.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
@@ -18,13 +17,13 @@ import android.widget.ListView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener;
-import com.iurizar.temtypesandroid.R;
-import com.iurizar.temtypesandroid.adapters.ListViewAdapter;
-import com.iurizar.temtypesandroid.fragments.AttackingFragment;
-import com.iurizar.temtypesandroid.fragments.DefendingFragment;
-import com.iurizar.temtypesandroid.model.TypeWeakness;
-import com.iurizar.temtypesandroid.networkutils.RetrofitBuilder;
-import com.iurizar.temtypesandroid.networkutils.TypeService;
+import tech.iurizar.temtypes.R;
+import tech.iurizar.temtypes.adapters.ListViewAdapter;
+import tech.iurizar.temtypes.fragments.AttackingFragment;
+import tech.iurizar.temtypes.fragments.DefendingFragment;
+import tech.iurizar.temtypes.model.TypeWeakness;
+import tech.iurizar.temtypes.networkutils.RetrofitBuilder;
+import tech.iurizar.temtypes.networkutils.TypeService;
 
 import org.jetbrains.annotations.NotNull;
 

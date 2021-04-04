@@ -1,19 +1,17 @@
-package com.iurizar.temtypesandroid.adapters;
+package tech.iurizar.temtypes.adapters;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
-import android.widget.TextClock;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.iurizar.temtypesandroid.R;
+import tech.iurizar.temtypes.R;
 
 public class ListViewAdapter extends ArrayAdapter<String> {
     private final Context context;

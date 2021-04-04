@@ -1,7 +1,5 @@
-package com.iurizar.temtypesandroid.fragments;
+package tech.iurizar.temtypes.fragments;
 
-import android.content.Context;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -12,11 +10,11 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.iurizar.temtypesandroid.R;
-import com.iurizar.temtypesandroid.activities.MainActivity;
-import com.iurizar.temtypesandroid.calculatorutils.WeaknessCalculator;
-import com.iurizar.temtypesandroid.model.Type;
-import com.iurizar.temtypesandroid.utils.StyleUtils;
+import tech.iurizar.temtypes.R;
+import tech.iurizar.temtypes.activities.MainActivity;
+import tech.iurizar.temtypes.calculatorutils.WeaknessCalculator;
+import tech.iurizar.temtypes.model.Type;
+import tech.iurizar.temtypes.utils.StyleUtils;
 
 /**
  * A simple {@link Fragment} subclass.

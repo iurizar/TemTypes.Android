@@ -1,13 +1,12 @@
-package com.iurizar.temtypesandroid.utils;
+package tech.iurizar.temtypes.utils;
 
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Typeface;
-import android.widget.Button;
 import android.widget.TextView;
 
-import com.iurizar.temtypesandroid.R;
-import com.iurizar.temtypesandroid.model.Type;
+import tech.iurizar.temtypes.R;
+import tech.iurizar.temtypes.model.Type;
 
 public class StyleUtils {
     private static final String[] TYPE_LIST = {"Neutral", "Fire", "Water", "Nature",

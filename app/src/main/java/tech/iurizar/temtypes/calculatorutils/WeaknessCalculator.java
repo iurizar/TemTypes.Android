@@ -1,7 +1,7 @@
-package com.iurizar.temtypesandroid.calculatorutils;
+package tech.iurizar.temtypes.calculatorutils;
 
-import com.iurizar.temtypesandroid.model.Type;
-import com.iurizar.temtypesandroid.model.TypeWeakness;
+import tech.iurizar.temtypes.model.Type;
+import tech.iurizar.temtypes.model.TypeWeakness;
 
 import java.lang.reflect.Field;
 

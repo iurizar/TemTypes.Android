@@ -1,4 +1,4 @@
-package com.iurizar.temtypesandroid.model;
+package tech.iurizar.temtypes.model;
 
 
 import com.google.gson.annotations.Expose;

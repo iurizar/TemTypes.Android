@@ -1,4 +1,4 @@
-package com.iurizar.temtypesandroid.networkutils;
+package tech.iurizar.temtypes.networkutils;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;

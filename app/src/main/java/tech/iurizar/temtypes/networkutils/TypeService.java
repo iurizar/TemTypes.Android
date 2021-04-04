@@ -1,6 +1,6 @@
-package com.iurizar.temtypesandroid.networkutils;
+package tech.iurizar.temtypes.networkutils;
 
-import com.iurizar.temtypesandroid.model.TypeWeakness;
+import tech.iurizar.temtypes.model.TypeWeakness;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

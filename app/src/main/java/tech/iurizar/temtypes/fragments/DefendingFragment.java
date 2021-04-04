@@ -1,13 +1,10 @@
-package com.iurizar.temtypesandroid.fragments;
+package tech.iurizar.temtypes.fragments;
 
-import android.app.Activity;
 import android.graphics.Typeface;
 import android.os.Bundle;
 
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,21 +17,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.iurizar.temtypesandroid.R;
-import com.iurizar.temtypesandroid.activities.MainActivity;
-import com.iurizar.temtypesandroid.calculatorutils.WeaknessCalculator;
-import com.iurizar.temtypesandroid.model.Type;
-import com.iurizar.temtypesandroid.model.TypeWeakness;
-import com.iurizar.temtypesandroid.networkutils.RetrofitBuilder;
-import com.iurizar.temtypesandroid.networkutils.TypeService;
-import com.iurizar.temtypesandroid.utils.StyleUtils;
+import tech.iurizar.temtypes.R;
+import tech.iurizar.temtypes.activities.MainActivity;
+import tech.iurizar.temtypes.calculatorutils.WeaknessCalculator;
+import tech.iurizar.temtypes.model.Type;
+import tech.iurizar.temtypes.model.TypeWeakness;
+import tech.iurizar.temtypes.utils.StyleUtils;
 
-import org.jetbrains.annotations.Contract;
 import org.jetbrains.annotations.NotNull;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
 
 
 public class DefendingFragment extends Fragment {
