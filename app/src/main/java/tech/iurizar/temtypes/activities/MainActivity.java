@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.tabs.TabLayout;
@@ -113,34 +115,40 @@ public class MainActivity extends AppCompatActivity {
                         secondType = item;
                     }
 
-
-                    if(!firstType.equalsIgnoreCase("") && secondType.equalsIgnoreCase("") && selectedButton ==1) {
-                        fragmentDef = new DefendingFragment();
-                        fragmentDef.setType(firstType,secondType,selectedButton);
-                        FragmentManager fm = getSupportFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.simpleFrameLayout,fragmentDef);
-                        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                        ft.commit();
-                    } else if (!secondType.equalsIgnoreCase("") && firstType.equalsIgnoreCase("") && selectedButton==2) {
-                        fragmentDef = new DefendingFragment();
-                        fragmentDef.setType(firstType,secondType,selectedButton);
-                        FragmentManager fm = getSupportFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.simpleFrameLayout,fragmentDef);
-                        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                        ft.commit();
-                    } else if (!secondType.equalsIgnoreCase("") && !firstType.equalsIgnoreCase("")) {
-                        fragmentDef = new DefendingFragment();
-                        fragmentDef.setDoubleType(firstType,secondType);
-                        FragmentManager fm = getSupportFragmentManager();
-                        FragmentTransaction ft = fm.beginTransaction();
-                        ft.replace(R.id.simpleFrameLayout,fragmentDef);
-                        ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
-                        ft.commit();
+                    if(firstType.equalsIgnoreCase(secondType)) {
+                        fr.resetFragmentSameTypesSelected();
+                        Context context = getApplicationContext();
+                        CharSequence text = "You can select the same types. Please select a different type.";
+                        int duration = Toast.LENGTH_SHORT;
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    } else {
+                        if(!firstType.equalsIgnoreCase("") && secondType.equalsIgnoreCase("") && selectedButton ==1) {
+                            fragmentDef = new DefendingFragment();
+                            fragmentDef.setType(firstType,secondType,selectedButton);
+                            FragmentManager fm = getSupportFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.simpleFrameLayout,fragmentDef);
+                            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                            ft.commit();
+                        } else if (!secondType.equalsIgnoreCase("") && firstType.equalsIgnoreCase("") && selectedButton==2) {
+                            fragmentDef = new DefendingFragment();
+                            fragmentDef.setType(firstType,secondType,selectedButton);
+                            FragmentManager fm = getSupportFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.simpleFrameLayout,fragmentDef);
+                            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                            ft.commit();
+                        } else if (!secondType.equalsIgnoreCase("") && !firstType.equalsIgnoreCase("")) {
+                            fragmentDef = new DefendingFragment();
+                            fragmentDef.setDoubleType(firstType,secondType);
+                            FragmentManager fm = getSupportFragmentManager();
+                            FragmentTransaction ft = fm.beginTransaction();
+                            ft.replace(R.id.simpleFrameLayout,fragmentDef);
+                            ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_OPEN);
+                            ft.commit();
+                        }
                     }
-
-
                 } else if(position == 1) {
                     fragmentAtt = new AttackingFragment();
                     fragmentAtt.setType(item);

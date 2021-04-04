@@ -206,6 +206,12 @@ public class DefendingFragment extends Fragment {
         }
     }
 
+    public void resetFragmentSameTypesSelected() {
+        selectedTypeTwo = "";
+        type2.setBackgroundColor(getResources().getColor(R.color.purple_500, null));
+        type2.setText("Type 2");
+    }
+
     public void setDoubleType(String s, String z) {
         selectedTypeOne = s;
         selectedTypeTwo = z;
