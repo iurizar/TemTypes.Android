@@ -1,5 +1,5 @@
 package tech.iurizar.temtypes.utils;
 
 public class FragmentUtils {
-    public static boolean sDisableFragmentAnimations = false;
+    public static boolean sDisableFragmentAnimations = true;
 }
