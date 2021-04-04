@@ -112,7 +112,6 @@ public class DefendingFragment extends Fragment {
                 ((MainActivity)getActivity()).ShowBottomSheet();
             }
         });
-
         if(selectedTypeOne == null) {
             selectedTypeOne = "";
         }
@@ -122,38 +121,40 @@ public class DefendingFragment extends Fragment {
         findViews(view);
         textViews = getTextViews();
         if(!selectedTypeOne.equalsIgnoreCase("") && selectedTypeTwo.equalsIgnoreCase("")) {
-
-
-            MainActivity act = (MainActivity) getActivity();
-            String[] selectedArray = {selectedTypeOne};
-            WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
-            Type selType = cal.calculateDefendingWeakness();
-            assignText(selType);
-            StyleUtils style = new StyleUtils();
+            StyleUtils style = setFragmentView(selectedTypeOne);
             type1.setText(selectedTypeOne);
             type1.setBackgroundColor(style.changeButtonColor(selectedTypeOne, getContext()));
         } else if(!selectedTypeTwo.equalsIgnoreCase("") && selectedTypeOne.equalsIgnoreCase("")) {
-            MainActivity act = (MainActivity) getActivity();
-            String[] selectedArray = {selectedTypeTwo};
-            WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
-            Type selType = cal.calculateDefendingWeakness();
-            assignText(selType);
-            StyleUtils style = new StyleUtils();
+            StyleUtils style = setFragmentView(selectedTypeTwo);
             type2.setText(selectedTypeTwo);
             type2.setBackgroundColor(style.changeButtonColor(selectedTypeTwo, getContext()));
         } else if(!selectedTypeTwo.equalsIgnoreCase("") && !selectedTypeOne.equalsIgnoreCase("")) {
-            MainActivity act = (MainActivity) getActivity();
-            String[] selectedArray = {selectedTypeOne, selectedTypeTwo};
-            WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
-            Type selType = cal.calculateDefendingWeakness();
-            assignText(selType);
-            StyleUtils style = new StyleUtils();
+            StyleUtils style = setDoubleTypeFragmentView();
             type1.setText(selectedTypeOne);
             type1.setBackgroundColor(style.changeButtonColor(selectedTypeOne, getContext()));
             type2.setText(selectedTypeTwo);
             type2.setBackgroundColor(style.changeButtonColor(selectedTypeTwo, getContext()));
         }
         return view;
+    }
+
+    @NotNull
+    private StyleUtils setFragmentView(String selectedType) {
+        MainActivity act = (MainActivity) getActivity();
+        String[] selectedArray = {selectedType};
+        WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
+        Type selType = cal.calculateDefendingWeakness();
+        assignText(selType);
+        return new StyleUtils();
+    }
+
+    private StyleUtils setDoubleTypeFragmentView() {
+        MainActivity act = (MainActivity) getActivity();
+        String[] selectedArray = {selectedTypeOne, selectedTypeTwo};
+        WeaknessCalculator cal = new WeaknessCalculator(act.responseType, selectedArray);
+        Type selType = cal.calculateDefendingWeakness();
+        assignText(selType);
+        return new StyleUtils();
     }
 
     private void findViews(View view) {
